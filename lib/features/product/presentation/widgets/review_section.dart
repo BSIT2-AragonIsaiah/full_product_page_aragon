@@ -8,7 +8,8 @@ class ReviewSection extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.all(16),
       child: ListTile(
-        leading: CircleAvatar(child: Text("<Img>")),
+        leading: CircleAvatar(backgroundImage: AssetImage("assets/images/Icon.png"),
+),
         title: Text("Veronika"),
         subtitle: Text("Nice product!"),
       ),

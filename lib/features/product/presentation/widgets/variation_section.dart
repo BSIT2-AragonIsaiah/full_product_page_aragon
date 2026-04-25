@@ -5,15 +5,37 @@ class VariationSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(16),
+    return Padding(
+      padding: const EdgeInsets.all(16),
       child: Row(
         children: [
-          Chip(label: Text("Pink")),
-          SizedBox(width: 10),
-          Chip(label: Text("M")),
+          variationImage("assets/images/Variation_1.png"),
+          const SizedBox(width: 10),
+          variationImage("assets/images/Variation_2.png"),
+          const SizedBox(width: 10),
+          variationImage("assets/images/Variation_3.png"),
+          const SizedBox(width: 10),
+          
+          const Chip(label: Text("Pink")),
+          const SizedBox(width: 10),
+          const Chip(label: Text("M")),
         ],
       ),
     );
   }
+}
+
+Widget variationImage(String path) {
+  return Container(
+    width: 60,
+    height: 60,
+    margin: const EdgeInsets.only(right: 10),
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(10),
+      child: Image.asset(
+        path,
+        fit: BoxFit.cover,
+      ),
+    ),
+  );
 }

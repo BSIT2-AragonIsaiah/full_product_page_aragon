@@ -10,8 +10,12 @@ class ImageSection extends StatelessWidget {
         Container(
           height: 350,
           width: double.infinity,
-          color: Colors.yellow,
-          child: const Center(child: Text("<Image here>")),
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/Main.png"),
+              fit: BoxFit.cover,
+            ),
+          ),
         ),
         const Positioned(top: 10, left: 10, child: Icon(Icons.arrow_back)),
         const Positioned(top: 10, right: 10, child: Icon(Icons.favorite_border)),
