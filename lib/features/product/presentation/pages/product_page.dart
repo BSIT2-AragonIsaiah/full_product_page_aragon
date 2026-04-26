@@ -18,7 +18,7 @@ class ProductPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          // WHOLE PAGE SCROLL
+          // WHOLE PAGE
           Expanded(
             child: SingleChildScrollView(
               child: Column(
@@ -29,16 +29,11 @@ class ProductPage extends StatelessWidget {
                   SpecsSection(),
                   DeliverySection(),
                   ReviewSection(),
-
-                  // ONLY horizontal section
                   HorizontalProducts(
                     title: "Most Popular",
                     titleFontSize: 24,
                     titleFontWeight: FontWeight.w900,
                   ),
-
-
-                  // PART OF vertical scroll
                   YouMightLikeSection(),
                 ],
               ),

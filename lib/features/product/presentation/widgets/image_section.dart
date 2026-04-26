@@ -8,7 +8,7 @@ class ImageSection extends StatelessWidget {
     return Stack(
       alignment: Alignment.bottomCenter,
       children: [
-        // 🖼 IMAGE
+
         Container(
           height: 480,
           width: double.infinity,
@@ -20,7 +20,7 @@ class ImageSection extends StatelessWidget {
           ),
         ),
 
-        // 🔵 BLUE INDICATORS (Figma style)
+  
         Positioned(
           bottom: 12,
           child: Row(
