@@ -6,11 +6,11 @@ class HorizontalProducts extends StatelessWidget {
   final FontWeight titleFontWeight;
 
   const HorizontalProducts({
-    super.key,
+    Key? key,
     required this.title,
     this.titleFontSize = 16.0,
     this.titleFontWeight = FontWeight.bold,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
