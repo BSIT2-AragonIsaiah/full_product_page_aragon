@@ -32,7 +32,6 @@ class ReviewSection extends StatelessWidget {
 
           const SizedBox(height: 8),
 
-          // ⭐ Rating summary block
           Row(
             children: [
               _buildStars(4, size: 24),
@@ -43,7 +42,6 @@ class ReviewSection extends StatelessWidget {
 
           const SizedBox(height: 16),
 
-          // 🧾 Review item
           ListTile(
             leading: const CircleAvatar(
               backgroundImage: AssetImage("assets/images/Icon.png"),

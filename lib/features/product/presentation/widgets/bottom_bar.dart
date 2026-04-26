@@ -19,7 +19,7 @@ class BottomBar extends StatelessWidget {
       ),
       child: Row(
         children: [
-          // ❤️ Favorite icon
+
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
@@ -31,7 +31,7 @@ class BottomBar extends StatelessWidget {
 
           const SizedBox(width: 10),
 
-          // 🛒 Add to cart
+
           Expanded(
             child: ElevatedButton(
               onPressed: () {},
@@ -49,7 +49,6 @@ class BottomBar extends StatelessWidget {
 
           const SizedBox(width: 10),
 
-          // ⚡ Buy now
           Expanded(
             child: ElevatedButton(
               onPressed: () {},

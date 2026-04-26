@@ -98,7 +98,7 @@ class HorizontalProducts extends StatelessWidget {
 
               const SizedBox(height: 8),
 
-              // LIKES + BADGE
+              // LIKES BADGE
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
