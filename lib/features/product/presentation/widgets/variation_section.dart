@@ -7,18 +7,46 @@ class VariationSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          variationImage("assets/images/Variation_1.png"),
-          const SizedBox(width: 10),
-          variationImage("assets/images/Variation_2.png"),
-          const SizedBox(width: 10),
-          variationImage("assets/images/Variation_3.png"),
-          const SizedBox(width: 10),
-          
-          const Chip(label: Text("Pink")),
-          const SizedBox(width: 10),
-          const Chip(label: Text("M")),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                "Variations",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Row(
+                children: [
+                  chip("Pink"),
+                  const SizedBox(width: 8),
+                  chip("M"),
+                  const SizedBox(width: 8),
+                ],
+              ),
+              Row(),
+              Row(),
+              Row(
+                children: [
+                  circleArrow(),
+                ],
+              )
+            ],
+          ),
+
+          const SizedBox(height: 12),
+
+          Row(
+            children: [
+              variationImage("assets/images/Variation_1.png"),
+              variationImage("assets/images/Variation_2.png"),
+              variationImage("assets/images/Variation_3.png"),
+            ],
+          ),
         ],
       ),
     );
@@ -37,5 +65,24 @@ Widget variationImage(String path) {
         fit: BoxFit.cover,
       ),
     ),
+  );
+}
+
+Widget chip(String text) {
+  return Chip(
+    label: Text(text),
+    backgroundColor: Colors.grey.shade200,
+  );
+}
+
+Widget circleArrow() {
+  return Container(
+    width: 40,
+    height: 40,
+    decoration: const BoxDecoration(
+      color: Colors.blue,
+      shape: BoxShape.circle,
+    ),
+    child: const Icon(Icons.arrow_forward, color: Colors.white),
   );
 }

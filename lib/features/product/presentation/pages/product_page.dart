@@ -22,7 +22,7 @@ class ProductPage extends StatelessWidget {
           Expanded(
             child: SingleChildScrollView(
               child: Column(
-                children: const [
+                children: [
                   ImageSection(),
                   PriceSection(),
                   VariationSection(),

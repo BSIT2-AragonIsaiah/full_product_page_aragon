@@ -6,9 +6,11 @@ class ImageSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      alignment: Alignment.bottomCenter,
       children: [
+        // 🖼 IMAGE
         Container(
-          height: 350,
+          height: 480,
           width: double.infinity,
           decoration: const BoxDecoration(
             image: DecorationImage(
@@ -17,8 +19,28 @@ class ImageSection extends StatelessWidget {
             ),
           ),
         ),
-        const Positioned(top: 10, left: 10, child: Icon(Icons.arrow_back)),
-        const Positioned(top: 10, right: 10, child: Icon(Icons.favorite_border)),
+
+        // 🔵 BLUE INDICATORS (Figma style)
+        Positioned(
+          bottom: 12,
+          child: Row(
+            children: List.generate(4, (index) {
+              bool isActive = index == 0;
+
+              return Container(
+                margin: const EdgeInsets.symmetric(horizontal: 3),
+                width: isActive ? 18 : 6, // dash vs dot effect
+                height: 6,
+                decoration: BoxDecoration(
+                  color: isActive
+                      ? Colors.blue
+                      : Colors.blue.withOpacity(0.3),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              );
+            }),
+          ),
+        ),
       ],
     );
   }
