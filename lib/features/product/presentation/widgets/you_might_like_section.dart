@@ -22,8 +22,8 @@ class YouMightLikeSection extends StatelessWidget {
           const Text(
             "You Might Like",
             style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.w800,
+              fontSize: 24,
+              fontWeight: FontWeight.w900,
             ),
           ),
 

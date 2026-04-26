@@ -14,7 +14,7 @@ class DeliverySection extends StatelessWidget {
             "Delivery",
             style: TextStyle(
               fontSize: 24,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w900,
             ),
           ),
 

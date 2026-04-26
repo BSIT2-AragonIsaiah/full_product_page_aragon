@@ -17,7 +17,7 @@ class VariationSection extends StatelessWidget {
                 "Variations",
                 style: TextStyle(
                   fontSize: 24,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w900,
                 ),
               ),
               Row(

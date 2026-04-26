@@ -31,7 +31,12 @@ class ProductPage extends StatelessWidget {
                   ReviewSection(),
 
                   // ONLY horizontal section
-                  HorizontalProducts(title: "Most Popular"),
+                  HorizontalProducts(
+                    title: "Most Popular",
+                    titleFontSize: 24,
+                    titleFontWeight: FontWeight.w900,
+                  ),
+
 
                   // PART OF vertical scroll
                   YouMightLikeSection(),

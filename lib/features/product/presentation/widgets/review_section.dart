@@ -26,7 +26,7 @@ class ReviewSection extends StatelessWidget {
             "Ratings & Reviews",
             style: TextStyle(
               fontSize: 24,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w900,
             ),
           ),
 

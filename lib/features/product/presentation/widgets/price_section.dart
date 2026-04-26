@@ -13,8 +13,8 @@ class PriceSection extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text("\$17.00",
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+              const Text("\$17,00",
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900)),
               circleArrow(),
             ],
           ),

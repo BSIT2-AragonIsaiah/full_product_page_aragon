@@ -2,10 +2,14 @@ import 'package:flutter/material.dart';
 
 class HorizontalProducts extends StatelessWidget {
   final String title;
+  final double titleFontSize;
+  final FontWeight titleFontWeight;
 
   const HorizontalProducts({
     super.key,
     required this.title,
+    this.titleFontSize = 16.0,
+    this.titleFontWeight = FontWeight.bold,
   });
 
   @override
@@ -28,9 +32,9 @@ class HorizontalProducts extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                style: TextStyle(
+                  fontSize: titleFontSize,
+                  fontWeight: titleFontWeight,
                 ),
               ),
               const Text(

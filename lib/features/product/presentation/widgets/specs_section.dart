@@ -5,29 +5,29 @@ class SpecsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(16),
+    return Padding(
+      padding: const EdgeInsets.all(16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             "Specifications",
             style: TextStyle(
               fontSize: 24,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w900,
             ),
           ),
 
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
 
-          Text(
+          const Text(
             "Material",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
 
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
 
-          Wrap(
+          const Wrap(
             spacing: 10,
             children: [
               Chip(label: Text("Cotton 95%")),
@@ -35,31 +35,43 @@ class SpecsSection extends StatelessWidget {
             ],
           ),
 
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
 
-          Text(
+          const Text(
             "Origin",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
 
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
 
-          Chip(label: Text("EU")),
+          const Chip(label: Text("EU")),
 
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
+              const Text(
                 "Size guide",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              Icon(Icons.arrow_forward_ios, size: 18),
+              circleArrow(),
             ],
           ),
         ],
       ),
     );
   }
+}
+
+Widget circleArrow() {
+  return Container(
+    width: 40,
+    height: 40,
+    decoration: const BoxDecoration(
+      color: Colors.blue,
+      shape: BoxShape.circle,
+    ),
+    child: const Icon(Icons.arrow_forward, color: Colors.white),
+  );
 }
